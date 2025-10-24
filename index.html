@@ -986,6 +986,464 @@
     </style>
 </head>
 <body>
+    <!-- Add this RIGHT AFTER the opening <body> tag -->
+<div id="cosmic-preloader" class="cosmic-preloader">
+    <div class="cosmic-background"></div>
+    
+    <!-- Quantum Core -->
+    <div class="quantum-core">
+        <div class="core-ring ring-1"></div>
+        <div class="core-ring ring-2"></div>
+        <div class="core-ring ring-3"></div>
+        <div class="core-center"></div>
+        <div class="quantum-particles"></div>
+    </div>
+    
+    <!-- Brand Reveal -->
+    <div class="brand-reveal">
+        <div class="logo-text">NAADIRA</div>
+        <div class="tagline">Where African Heritage Meets Global Luxury</div>
+    </div>
+    
+    <!-- Loading Progress -->
+    <div class="loading-progress">
+        <div class="progress-text">
+            <span class="loading-status">Initializing Quantum Systems</span>
+            <span class="loading-percentage">0%</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+            <div class="progress-glow"></div>
+        </div>
+    </div>
+    
+    <!-- Global Nodes -->
+    <div class="global-nodes">
+        <div class="node abuja" data-city="Abuja"></div>
+        <div class="node new-york" data-city="New York"></div>
+        <div class="node london" data-city="London"></div>
+        <div class="node dubai" data-city="Dubai"></div>
+    </div>
+</div>
+
+<style>
+/* === COSMIC PRELOADER STYLES === */
+.cosmic-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 20%, rgba(114, 47, 55, 0.3) 0%, transparent 40%),
+        radial-gradient(ellipse at 80% 80%, rgba(45, 27, 71, 0.3) 0%, transparent 40%),
+        linear-gradient(135deg, #0a0a0a 0%, #0f1a30 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.cosmic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(201, 169, 110, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(201, 169, 110, 0.05) 0%, transparent 50%);
+    animation: cosmicPulse 8s ease-in-out infinite;
+}
+
+@keyframes cosmicPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.02); }
+}
+
+/* Quantum Core Animation */
+.quantum-core {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 3rem;
+}
+
+.core-ring {
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ring-1 {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #c9a96e;
+    animation: spin 3s linear infinite;
+}
+
+.ring-2 {
+    width: 80%;
+    height: 80%;
+    border-right: 2px solid rgba(201, 169, 110, 0.7);
+    animation: spin 2s linear infinite reverse;
+}
+
+.ring-3 {
+    width: 60%;
+    height: 60%;
+    border-bottom: 2px solid rgba(201, 169, 110, 0.5);
+    animation: spin 1.5s linear infinite;
+}
+
+.core-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #c9a96e, #b8941f);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #c9a96e, 0 0 40px #c9a96e;
+    animation: corePulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes corePulse {
+    0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 20px #c9a96e, 0 0 40px #c9a96e; }
+    100% { transform: translate(-50%, -50%) scale(1.2); box-shadow: 0 0 30px #c9a96e, 0 0 60px #c9a96e; }
+}
+
+/* Quantum Particles */
+.quantum-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.quantum-particles::before,
+.quantum-particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #c9a96e;
+    border-radius: 50%;
+    animation: particleOrbit 4s linear infinite;
+}
+
+.quantum-particles::before {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.quantum-particles::after {
+    top: 20%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+@keyframes particleOrbit {
+    0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+}
+
+/* Brand Reveal */
+.brand-reveal {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #c9a96e, #e8d9b5, #c9a96e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease infinite;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: logoReveal 1.5s ease 0.5s forwards;
+}
+
+.tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: taglineReveal 1.5s ease 1s forwards;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes logoReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes taglineReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading Progress */
+.loading-progress {
+    width: 300px;
+    max-width: 80%;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.loading-status {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-percentage {
+    color: #c9a96e;
+    font-weight: 600;
+}
+
+.progress-container {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #c9a96e, #e8d9b5);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.progress-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: progressGlow 2s ease-in-out infinite;
+}
+
+@keyframes progressGlow {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Global Nodes */
+.global-nodes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #c9a96e;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #c9a96e;
+    animation: nodePulse 2s ease-in-out infinite;
+}
+
+.node::after {
+    content: attr(data-city);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #c9a96e;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    animation: cityReveal 3s ease-in-out infinite;
+}
+
+.abuja { top: 40%; left: 50%; animation-delay: 0s; }
+.new-york { top: 35%; left: 25%; animation-delay: 0.5s; }
+.london { top: 33%; left: 48%; animation-delay: 1s; }
+.dubai { top: 42%; left: 58%; animation-delay: 1.5s; }
+
+@keyframes nodePulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+    50% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+}
+
+@keyframes cityReveal {
+    0%, 100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* Preloader Exit Animation */
+.cosmic-preloader.fade-out {
+    animation: preloaderExit 1.5s ease forwards;
+}
+
+@keyframes preloaderExit {
+    0% { opacity: 1; transform: scale(1); }
+    70% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(1.1); display: none; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .quantum-core {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 2rem;
+    }
+    
+    .core-center {
+        width: 15px;
+        height: 15px;
+    }
+}
+</style>
+
+<script>
+// Cosmic Preloader Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.getElementById('cosmic-preloader');
+    const progressBar = document.querySelector('.progress-bar');
+    const loadingPercentage = document.querySelector('.loading-percentage');
+    const loadingStatus = document.querySelector('.loading-status');
+    
+    // Loading status messages
+    const statusMessages = [
+        "Initializing Quantum Systems",
+        "Loading Couture Collections",
+        "Preparing Bespoke Menswear",
+        "Configuring Luxury Real Estate",
+        "Connecting Global Locations",
+        "Finalizing Luxury Experience"
+    ];
+    
+    let progress = 0;
+    let currentStatus = 0;
+    
+    // Simulate loading progress
+    const loadingInterval = setInterval(() => {
+        progress += Math.random() * 15;
+        
+        if (progress > 100) {
+            progress = 100;
+            clearInterval(loadingInterval);
+            
+            // Complete loading
+            setTimeout(() => {
+                completeLoading();
+            }, 500);
+        }
+        
+        // Update progress bar
+        progressBar.style.width = `${progress}%`;
+        loadingPercentage.textContent = `${Math.min(100, Math.round(progress))}%`;
+        
+        // Update status message every 20% progress
+        if (progress > (currentStatus + 1) * 20) {
+            currentStatus = Math.min(statusMessages.length - 1, currentStatus + 1);
+            loadingStatus.textContent = statusMessages[currentStatus];
+            
+            // Add typing effect
+            typeWriterEffect(loadingStatus, statusMessages[currentStatus]);
+        }
+        
+    }, 200);
+    
+    // Typewriter effect for status messages
+    function typeWriterEffect(element, text) {
+        let i = 0;
+        element.textContent = '';
+        
+        const typing = setInterval(() => {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(typing);
+            }
+        }, 50);
+    }
+    
+    // Complete loading sequence
+    function completeLoading() {
+        // Add fade-out class to preloader
+        preloader.classList.add('fade-out');
+        
+        // Enable scrolling and show content
+        setTimeout(() => {
+            document.body.style.overflow = 'auto';
+            preloader.style.display = 'none';
+            
+            // Trigger any existing page animations
+            if (typeof gsap !== 'undefined') {
+                gsap.utils.toArray('.fade-in').forEach(element => {
+                    gsap.fromTo(element, {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: element,
+                            start: 'top 80%',
+                            end: 'bottom 20%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    });
+                });
+            }
+        }, 1500);
+    }
+    
+    // Prevent scrolling during preloader
+    document.body.style.overflow = 'hidden';
+});
+</script>
     <!-- Advanced Background Effects -->
     <div class="cosmic-bg"></div>
     <div class="luxury-overlay"></div>
