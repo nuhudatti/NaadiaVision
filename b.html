@@ -1,0 +1,689 @@
+<!-- Add this HTML right before the closing </body> tag -->
+<div class="cosmic-development-modal" id="developmentModal">
+    <div class="cosmic-modal-backdrop"></div>
+    <div class="cosmic-modal-container">
+        <div class="cosmic-modal-content">
+            <!-- Quantum Header -->
+            <div class="cosmic-modal-header">
+                <div class="quantum-orb">
+                    <div class="quantum-ring ring-1"></div>
+                    <div class="quantum-ring ring-2"></div>
+                    <div class="quantum-ring ring-3"></div>
+                    <div class="quantum-core"></div>
+                </div>
+                <h2 class="cosmic-title">Quantum Development in Progress</h2>
+                <button class="cosmic-close-btn" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Cosmic Body -->
+            <div class="cosmic-modal-body">
+                <div class="cosmic-message">
+                    <div class="message-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Naadira Homes is Launching Soon!</h3>
+                    <p>We're crafting an extraordinary real estate experience that will redefine luxury living across continents.</p>
+                </div>
+
+                <!-- Development Progress -->
+                <div class="development-progress">
+                    <div class="progress-info">
+                        <span class="progress-text">Quantum Construction Progress</span>
+                        <span class="progress-percent">87%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-bar" style="width: 87%">
+                            <div class="progress-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Luxury Properties</h4>
+                        <p>Premium real estate investments in prime global locations</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <h4>Interior Design</h4>
+                        <p>Complete bespoke interior solutions for sophisticated living</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <h4>Global Portfolio</h4>
+                        <p>From Abuja to Dubai, London to New York</p>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-section">
+                    <h4>Launching In</h4>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-number">21</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">14</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">36</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="cosmic-actions">
+                    <button class="cosmic-btn primary" id="notifyBtn">
+                        <i class="fas fa-bell"></i> Notify Me at Launch
+                    </button>
+                    <button class="cosmic-btn secondary" id="closeModal">
+                        <i class="fas fa-sparkles"></i> Explore Other Collections
+                    </button>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="social-proof">
+                    <div class="proof-stats">
+                        <div class="stat">
+                            <span class="stat-number">2,847</span>
+                            <span class="stat-label">Waitlist Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">$150M+</span>
+                            <span class="stat-label">Property Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Cosmic Development Modal Styles */
+.cosmic-development-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cosmic-development-modal.active {
+    display: flex;
+}
+
+.cosmic-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    animation: backdropFadeIn 0.6s ease;
+}
+
+@keyframes backdropFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.cosmic-modal-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: 
+        linear-gradient(145deg, rgba(15, 26, 48, 0.95), rgba(20, 25, 46, 0.98)),
+        radial-gradient(circle at top right, rgba(201, 169, 110, 0.1), transparent 40%);
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    border-radius: 24px;
+    overflow: hidden;
+    transform: scale(0.9) translateY(50px);
+    opacity: 0;
+    animation: modalEntrance 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+    backdrop-filter: blur(30px);
+    box-shadow: 
+        0 0 80px rgba(201, 169, 110, 0.2),
+        0 0 0 1px rgba(201, 169, 110, 0.1);
+}
+
+@keyframes modalEntrance {
+    to { 
+        transform: scale(1) translateY(0); 
+        opacity: 1;
+    }
+}
+
+.cosmic-modal-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Quantum Header */
+.cosmic-modal-header {
+    padding: 2.5rem 2.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(201, 169, 110, 0.1), transparent);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.quantum-orb {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.quantum-ring {
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ring-1 {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #c9a96e;
+    animation: quantumSpin 3s linear infinite;
+}
+
+.ring-2 {
+    width: 80%;
+    height: 80%;
+    border-right: 2px solid rgba(201, 169, 110, 0.7);
+    animation: quantumSpin 2s linear infinite reverse;
+}
+
+.ring-3 {
+    width: 60%;
+    height: 60%;
+    border-bottom: 2px solid rgba(201, 169, 110, 0.5);
+    animation: quantumSpin 1.5s linear infinite;
+}
+
+.quantum-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #c9a96e, #b8941f);
+    border-radius: 50%;
+    box-shadow: 0 0 15px #c9a96e;
+    animation: corePulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes quantumSpin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes corePulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(1.3); }
+}
+
+.cosmic-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #fff, #c9a96e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    flex: 1;
+}
+
+.cosmic-close-btn {
+    background: rgba(201, 169, 110, 0.15);
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.cosmic-close-btn:hover {
+    background: #c9a96e;
+    color: #0f1a30;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Cosmic Body */
+.cosmic-modal-body {
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.cosmic-message {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.message-icon {
+    font-size: 3rem;
+    color: #c9a96e;
+    margin-bottom: 1rem;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.cosmic-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.cosmic-message p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Development Progress */
+.development-progress {
+    margin-bottom: 2rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.progress-text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.progress-percent {
+    color: #c9a96e;
+    font-weight: 600;
+}
+
+.progress-track {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #c9a96e, #e8d9b5);
+    border-radius: 3px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.progress-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: progressShimmer 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 110, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 169, 110, 0.3);
+    box-shadow: 0 10px 25px rgba(201, 169, 110, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #c9a96e;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+/* Countdown Timer */
+.countdown-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(201, 169, 110, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 110, 0.1);
+}
+
+.countdown-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #c9a96e;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c9a96e;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.countdown-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Action Buttons */
+.cosmic-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.cosmic-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cosmic-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.cosmic-btn:hover::before {
+    left: 100%;
+}
+
+.cosmic-btn.primary {
+    background: linear-gradient(135deg, #c9a96e, #b8941f);
+    color: #0f1a30;
+    box-shadow: 0 5px 15px rgba(201, 169, 110, 0.3);
+}
+
+.cosmic-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(201, 169, 110, 0.4);
+}
+
+.cosmic-btn.secondary {
+    background: transparent;
+    color: #c9a96e;
+    border: 1px solid #c9a96e;
+}
+
+.cosmic-btn.secondary:hover {
+    background: rgba(201, 169, 110, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Social Proof */
+.social-proof {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proof-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #c9a96e;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cosmic-modal-header {
+        padding: 2rem 1.5rem 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .cosmic-title {
+        font-size: 1.5rem;
+    }
+    
+    .cosmic-modal-body {
+        padding: 1.5rem 1.5rem 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .countdown-timer {
+        gap: 1rem;
+    }
+    
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+    
+    .proof-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cosmic-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const exploreBtn = document.querySelector('a[href="homes-collection.html"]');
+    const developmentModal = document.getElementById('developmentModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalCloseBtn = document.getElementById('modalClose');
+    const notifyBtn = document.getElementById('notifyBtn');
+    
+    // Open modal when Explore Naadira Homes is clicked
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            developmentModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    // Close modal functions
+    function closeModal() {
+        developmentModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
+    
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
+    
+    // Close modal when clicking outside content
+    developmentModal.addEventListener('click', function(e) {
+        if (e.target === developmentModal) {
+            closeModal();
+        }
+    });
+    
+    // Notify button functionality
+    if (notifyBtn) {
+        notifyBtn.addEventListener('click', function() {
+            // Add loading state
+            const originalText = notifyBtn.innerHTML;
+            notifyBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Adding to Waitlist...';
+            notifyBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                notifyBtn.innerHTML = '<i class="fas fa-check"></i> Added to Waitlist!';
+                notifyBtn.style.background = '#51cf66';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    notifyBtn.innerHTML = originalText;
+                    notifyBtn.disabled = false;
+                    notifyBtn.style.background = '';
+                }, 2000);
+            }, 1500);
+        });
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && developmentModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    // Update countdown timer (for demo purposes)
+    function updateCountdown() {
+        // This would normally calculate real time until launch
+        // For demo, we'll just animate the numbers slightly
+        const days = document.querySelector('.countdown-item:nth-child(1) .countdown-number');
+        const hours = document.querySelector('.countdown-item:nth-child(2) .countdown-number');
+        const minutes = document.querySelector('.countdown-item:nth-child(3) .countdown-number');
+        
+        if (days && hours && minutes) {
+            // Add subtle animation to numbers
+            [days, hours, minutes].forEach(el => {
+                el.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    el.style.transform = 'scale(1)';
+                }, 300);
+            });
+        }
+    }
+    
+    // Animate countdown every 30 seconds
+    setInterval(updateCountdown, 30000);
+});
+</script>
